@@ -28,7 +28,7 @@ function stringAvatar(name, ChooseColor) {
     sx: {
       bgcolor: bgColor,
     },
-    children: avatarContent,
+    children: avatarContent.toUpperCase(),
   };
 }
 

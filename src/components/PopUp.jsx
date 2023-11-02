@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 import '../css/PopUp.scss'
 const PopUp = ({closePopUp, handleGroupCreate}) => {
     const [newGroupName, setNewGroupName] = useState('');
-    const [selectedColor, setSelectedColor] = useState('#000'); // Default color
+    // Retrieve the selected color from local storage
+   const initialColor = localStorage.getItem('selectedColor') || '#000'; // Use '#000' as the default color
+
+   
+     const [selectedColor, setSelectedColor] = useState(initialColor);
 
     const handleColorChange = (color) => {
         setSelectedColor(color);
+        localStorage.setItem('selectedColor', color);
+
       };
     const handleCreateGroup = () => {
         if (newGroupName) {

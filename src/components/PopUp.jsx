@@ -2,16 +2,22 @@ import React, { useState } from 'react'
 import '../css/PopUp.scss'
 const PopUp = ({closePopUp, handleGroupCreate}) => {
     const [newGroupName, setNewGroupName] = useState('');
-    // Retrieve the selected color from local storage
-   const initialColor = localStorage.getItem('selectedColor') || '#000'; // Use '#000' as the default color
+    
+    const initialColors = JSON.parse(localStorage.getItem('selectedColors')) || [];
+       
+     const initialColor = initialColors.length > 0 ? initialColors[initialColors.length - 1] : '#000';
+       const [selectedColor, setSelectedColor] = useState(initialColor);
 
-   
-     const [selectedColor, setSelectedColor] = useState(initialColor);
 
     const handleColorChange = (color) => {
-        setSelectedColor(color);
-        localStorage.setItem('selectedColor', color);
+     
+    const existingColors = JSON.parse(localStorage.getItem('selectedColors')) || [];
+     // Add the newly selected color to the array
+    existingColors.push(color);
+   // Set the array of colors in local storage
+   localStorage.setItem('selectedColors', JSON.stringify(existingColors));
 
+  setSelectedColor(color);
       };
     const handleCreateGroup = () => {
         if (newGroupName) {
@@ -40,32 +46,44 @@ const PopUp = ({closePopUp, handleGroupCreate}) => {
                         <p
                     id="purple"
                     onClick={() => handleColorChange('#b38bfa')}
-                    style={{ background: '#b38bfa' }}
+                    style={{ 
+                      background: selectedColor === '#b38bfa' ? selectedColor : '#b38bfa',
+                     }}
                   ></p>
                   <p
                     id="pink"
                     onClick={() => handleColorChange('#ff79f2')}
-                    style={{ background: '#ff79f2' }}
+                    style={{ 
+                      background: selectedColor === '#ff79f2' ? selectedColor : '#ff79f2',
+                     }}
                   ></p>
                   <p
                     id="green"
                     onClick={() => handleColorChange('#43e6fc')}
-                    style={{ background: '#43e6fc' }}
+                    style={{ 
+                      background: selectedColor === '#43e6fc' ? selectedColor : '#43e6fc',
+                     }}
                   ></p>
                   <p
                     id="orange"
                     onClick={() => handleColorChange('#f19576')}
-                    style={{ background: '#f19576' }}
+                    style={{ 
+                      background: selectedColor === '#f19576' ? selectedColor : '#f19576',
+                     }}
                   ></p>
                   <p
                     id="blue"
                     onClick={() => handleColorChange('#0047FF')}
-                    style={{ background: '#0047FF' }}
+                    style={{ 
+                      background: selectedColor === '#0047FF' ? selectedColor : '#0047FF',
+                     }}
                   ></p>
                   <p
                     id="skyblue"
                     onClick={() => handleColorChange('#6691ff')}
-                    style={{ background: '#6691ff' }}
+                    style={{ 
+                      background: selectedColor === '#6691ff'? selectedColor : '#6691ff',
+                     }}
                   ></p>
                         </div>
                     </div>

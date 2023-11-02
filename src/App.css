@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+}
+.notes-app{
+    height: 100vh;
+   
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+}
+.sidebar {
+    flex: 0.35;
+   
+    width: 30%;
+    display: flex;
+  flex-direction: column;
+  
+  height: 100%;
+
+}
+.sidebar-header{
+    display: flex;
+    padding: 20px;
+    border-right: 1px solid lightgray;
+}
+.sidebar-buttont{
+    display: flex;
+}
+.group-menu{
+    display: flex;
+    flex-direction: column;
+  width: 300px;
+}
+.btn-add{
+    background: black;
+    border-radius: 50px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+.right-menu{
+width: 100%;
+height: 100vh;
+
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+  
+  .main-content .header {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .notes {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .notes ul li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .note-text {
+    font-size: 16px;
+  }
+  
+  .note-meta {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .note-input {
+    margin-top: 10px;
+    bottom: 0;
+    position: absolute;
+    width: 60%;
+  }
+  
+  .note-input textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .note-input button {
+    background-color: #128c7e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .textarea-wrapper {
+    position: relative;
+  }
+  
+  .textarea-wrapper textarea {
+    width: 100%;
+    height: 150px; /* You can adjust the height as needed */
+    padding-right: 30px; /* Ensure space for the SendIcon */
+  }
+  
+  .textarea-wrapper .send-icon {
+    position: absolute;
+    bottom: 25px; /* Adjust the vertical position as needed */
+    right: 20px; /* Adjust the horizontal position as needed */
+    cursor: pointer;
+  }
+  @media (max-width: 576px) {
+    .sidebar{
+      width: 100%;
+    }
+    .right-menu{
+     
+    }
+    .notes-app{
+     display: block;
+    }
+    .group-menu{
+      display: block;
+      width: 100%;
+    }
+    
+  }

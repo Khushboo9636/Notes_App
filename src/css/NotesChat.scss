@@ -1,0 +1,133 @@
+@import "../css-config/mixins.scss";
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-content .header {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .header-title{
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    padding-left: 2px;
+    margin-left: -20px;
+    background-color: #E8E8E8;
+    margin-top: -20px;
+    margin-right: -20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .notes {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #F7ECDC;
+    height: 80%;
+    margin-left: -20px;
+    
+    margin-right: -20px;
+  }
+  
+  .notes ul li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow-wrap: anywhere;
+    padding-bottom: 30px;
+  }
+  
+  .note-text {
+    font-size: 16px;
+   
+    display: flex;
+    flex-flow: row;
+    height: max-content;
+  }
+  
+  .note-meta {
+    font-size: 12px;
+    color: black;
+    width: 20%;
+    margin-left: 5px;
+    margin-right: 20px;
+    padding-right: 5px;
+    font-weight: 600;
+    float: left;
+  }
+  
+  .note-input {
+    margin-top: -30px;
+    bottom: -22px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0px;
+
+  }
+  
+  .note-input textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .note-input button {
+    background-color: #128c7e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .textarea-wrapper {
+    position: relative;
+    margin-top: -48px;
+    padding-bottom: 1px;
+  }
+  
+  .textarea-wrapper textarea {
+    width: 100%;
+    height: 150px; /* You can adjust the height as needed */
+    padding-right: 30px; /* Ensure space for the SendIcon */
+  }
+  
+  .textarea-wrapper .send-icon {
+    position: absolute;
+    bottom: 25px; /* Adjust the vertical position as needed */
+    right: 20px; /* Adjust the horizontal position as needed */
+    cursor: pointer;
+  }
+  footer{
+    width: 103%;
+    height: 30%;
+    background: #E8E8E8;
+    padding-left: 10px;
+    margin-left: 0px;
+    margin-bottom:-20px;
+    position: relative;
+    
+  }
+  .fot{
+    padding-top: 0;
+    background: #E8E8E8;
+    width: 100%;
+    height: 100%;
+    margin-left: -32px;
+    margin-top: 45px;
+    padding-left: 50px;
+    /* padding-bottom: 128px; */
+    margin-bottom: 23px;
+  }

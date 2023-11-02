@@ -1,0 +1,99 @@
+@import '../css-config/mixins.scss';
+
+    .sidebar-chat {
+      width: 100%;
+      // margin-bottom: 2rem;
+      .side-detail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 4rem;
+        gap: 2rem;
+        margin-top: 4rem;
+        .icon {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+         
+          text-align: center;
+          @include md{
+            width: 4rem;
+            height: 4rem;
+          }
+          
+        }
+
+        .h1 {
+           
+
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                @include md{
+                  font-size: 1.8rem; 
+              }
+        }
+      }
+    }
+  
+
+.content {
+    display: none;
+    @include md {
+      background-color: #f7ecdc;
+      width: 100%;
+      height: 100vh;
+    }
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .center-content{
+      width: 100%;
+      height: 90vh;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+      width: 50%;
+      height: 50%;
+    }
+    h2{
+      font-size: 3rem;
+      font-weight: 600;
+      color: #292929;
+    }
+    p{
+      width: 50%;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+  .bottom-content{
+      width: 100%;
+      height: 10vh;
+      // background-color: aquamarine;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    p{
+        font-size: 1.5rem;
+       
+        color: #292929;
+        img{
+            width:1.2rem;
+            height: 1.4rem;
+        }
+    }
+  }
+  @media (max-width: 576px) {
+  .content{
+    display: none;
+  }
+  }
+
